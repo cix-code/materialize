@@ -36,16 +36,16 @@ input[type=search],
 textarea.materialize-textarea {
 
   // General Styles
-  background-color: transparent;
+  background-color: $input-background;
   border: none;
   border-bottom: $input-border;
   border-radius: 0;
   outline: none;
   height: $input-height;
-  width: 100%;
+  width: calc(100% - 10px);
   font-size: $input-font-size;
   margin: $input-margin;
-  padding: $input-padding;
+  padding: 0 5px;
   box-shadow: none;
   box-sizing: content-box;
   transition: $input-transition;
@@ -65,20 +65,21 @@ textarea.materialize-textarea {
 
   // Focused input style
   &:focus:not([readonly]) {
-    border-bottom: 1px solid $input-focus-color;
-    box-shadow: 0 1px 0 0 $input-focus-color;
+    border-bottom: 0px solid $input-focus-color;
+    box-shadow: none;
   }
 
   // Focused label style
   &:focus:not([readonly])+label {
-    color: $input-focus-color;
+    color: $secondary-color;
+	left: $gutter-width / 2;
   }
 
   // Valid Input Style
   &.valid,
   &:focus.valid {
-    border-bottom: 1px solid $input-success-color;
-    box-shadow: 0 1px 0 0 $input-success-color;
+    border-bottom: 0px solid $input-success-color;
+    box-shadow: none;
   }
 
   // Custom Success Message
@@ -92,8 +93,10 @@ textarea.materialize-textarea {
   // Invalid Input Style
   &.invalid,
   &:focus.invalid {
-    border-bottom: $input-invalid-border;
-    box-shadow: 0 1px 0 0 $input-error-color;
+    border-bottom: 0;
+    box-shadow: none;
+    background: #ffc8c8;
+    margin-bottom: 10px;
   }
 
   // Custom Error message
@@ -127,10 +130,10 @@ textarea.materialize-textarea {
   margin-top: 1rem;
 
   label {
-    color: $input-border-color;
+    color: $secondary-color;
     position: absolute;
     top: 0.8rem;
-    left: $gutter-width / 2;
+    left: $gutter-width / 1.3;
     font-size: 1rem;
     cursor: text;
     transition: .2s ease-out;
@@ -139,6 +142,7 @@ textarea.materialize-textarea {
   label.active {
     font-size: $label-font-size;
     transform: translateY(-140%);
+	left: $gutter-width / 2;
   }
 
   // Prefix Icons
@@ -225,7 +229,7 @@ textarea {
 
   &.materialize-textarea {
     overflow-y: hidden; /* prevents scroll bar flash */
-    padding: 1.6rem 0; /* prevents text jump on Enter keypress */
+    padding-bottom: 1.6rem; /* prevents text jump on Enter keypress */
     resize: none;
     min-height: $input-height;
   }

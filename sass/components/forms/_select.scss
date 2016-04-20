@@ -23,33 +23,35 @@ select {
   input.select-dropdown {
     position: relative;
     cursor: pointer;
-    background-color: transparent;
+    background-color: $select-background;
     border: none;
     border-bottom: $input-border;
     outline: none;
     height: $input-height;
     line-height: $input-height;
-    width: 100%;
+    width: calc(100% - 10px);
     font-size: $input-font-size;
     margin: $input-margin;
-    padding: 0;
+    padding: 0 5px;
     display: block;
   }
 
   span.caret {
     color: initial;
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 16px;
     font-size: 10px;
     &.disabled {
       color: $input-disabled-color;
     }
+	z-index: 1;
   }
 
   & + label {
     position: absolute;
-    top: -14px;
+    top: -17px;
+	left: $gutter-width / 2;
     font-size: $label-font-size;
   }
 }
@@ -65,7 +67,7 @@ select:disabled {
   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
   -moz-user-select: none; /* mozilla browsers */
   -ms-user-select: none; /* IE10+ */
-  border-bottom: 1px solid rgba(0,0,0,.3);
+  border-bottom: 0;
 }
 
 .select-wrapper i {

@@ -33,14 +33,14 @@
 /* 1. Colors
    ========================================================================== */
 
-$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color: #d9a400 !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
+$secondary-color: #545454 !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$link-color: #d9a400 !default;
 
 
 /* 2. Badges
@@ -54,7 +54,7 @@ $badge-bg-color: $secondary-color !default;
 
 // Shared styles
 $button-border: none !default;
-$button-background-focus: lighten($secondary-color, 4%) !default;
+$button-background-focus: lighten($primary-color, 4%) !default;
 $button-font-size: 1.3rem !default;
 $button-height: 36px !default;
 $button-padding: 0 2rem !default;
@@ -65,7 +65,7 @@ $button-disabled-background: #DFDFDF !default;
 $button-disabled-color: #9F9F9F !default;
 
 // Raised buttons
-$button-raised-background: $secondary-color !default;
+$button-raised-background: $primary-color !default;
 $button-raised-background-hover: lighten($button-raised-background, 5%) !default;
 $button-raised-color: #fff !default;
 
@@ -74,11 +74,11 @@ $button-large-icon-font-size: 1.6rem !default;
 $button-large-height: $button-height * 1.5 !default;
 
 // Flat buttons
-$button-flat-color: #343434 !default;
+$button-flat-color: #545454 !default;
 $button-flat-disabled-color: lighten(#999, 10%) !default;
 
 // Floating buttons
-$button-floating-background: $secondary-color !default;
+$button-floating-background: $primary-color !default;
 $button-floating-background-hover: $button-floating-background !default;
 $button-floating-color: #fff !default;
 $button-floating-size: 37px !default;
@@ -91,7 +91,7 @@ $button-floating-radius: 50% !default;
 
 $card-padding: 20px !default;
 $card-bg-color: #fff !default;
-$card-link-color: color("orange", "accent-2") !default;
+$card-link-color: darken($primary-color, 5%) !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
 
 
@@ -124,9 +124,10 @@ $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !
    ========================================================================== */
 
 $dropdown-bg-color: #fff !default;
-$dropdown-hover-bg-color: #eee !default;
+$dropdown-hover-bg-color: #f4f4f4 !default;
 $dropdown-color: $secondary-color !default;
-$dropdown-item-height: 50px !default;
+$dropdown-item-height: 40px !default;
+$dropdown-font-size: 14px !default;
 
 
 /* 9. Fonts
@@ -141,21 +142,21 @@ $roboto-font-path: "../fonts/roboto/" !default;
 // Text Inputs + Textarea
 $input-height: 3rem !default;
 $input-border-color: color("grey", "base") !default;
-$input-border: 1px solid $input-border-color !default;
-$input-background: #fff !default;
+$input-border: 0px solid $input-border-color !default;
+$input-background: #f4f4f4 !default;
 $input-error-color: $error-color !default;
 $input-success-color: $success-color !default;
 $input-focus-color: $secondary-color !default;
 $input-font-size: 1rem !default;
-$input-margin: 0 0 15px 0 !default;
-$input-padding: 0 !default;
+$input-margin: 0 !default;
+$input-padding: 0 10px !default;
 $input-transition: all .3s !default;
-$label-font-size: .8rem !default;
-$input-disabled-color: rgba(0,0,0, .26) !default;
+$label-font-size: .9rem !default;
+$input-disabled-color: rgba(0,0,0, .36) !default;
 $input-disabled-solid-color: #BDBDBD !default;
-$input-disabled-border: 1px dotted $input-disabled-color !default;
-$input-invalid-border: 1px solid $input-error-color !default;
-$placeholder-text-color: lighten($input-border-color, 20%) !default;
+$input-disabled-border: 0px dotted $input-disabled-color !default;
+$input-invalid-border: 0px solid $input-error-color !default;
+$placeholder-text-color: lighten($input-border-color, 10%) !default;
 
 // Radio Buttons
 $radio-fill-color: $secondary-color !default;
@@ -168,8 +169,8 @@ $range-width: 14px !default;
 $track-height: 3px !default;
 
 // Select
-$select-border: 1px solid #f2f2f2 !default;
-$select-background: rgba(255, 255, 255, 0.90) !default;
+$select-border: 0px solid #f2f2f2 !default;
+$select-background: #f4f4f4 !default;
 $select-focus: 1px solid lighten($secondary-color, 47%) !default;
 $select-padding: 5px !default;
 $select-radius: 2px !default;
@@ -245,8 +246,8 @@ $spinner-default-color: $secondary-color !default;
 /* 17. Tabs
    ========================================================================== */
 
-$tabs-underline-color: $primary-color-light !default;
-$tabs-text-color: $primary-color !default;
+$tabs-underline-color: $primary-color !default;
+$tabs-text-color: $secondary-color !default;
 $tabs-bg-color: #fff !default;
 
 
